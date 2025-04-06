@@ -88,8 +88,6 @@ public class SocketServerController {
             dataService.save(
                     dataEntity);
             webSocketService.addNewData(dataEntity);
-            webSocketService.updatePosture(data[5],data[6],data[7]);
-
         } catch (Exception e) {
             System.err.println("Error in TCP listener: " + e.getMessage());
         }

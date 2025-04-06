@@ -21,6 +21,8 @@ public class DataService {
 
         Instant start = date.atStartOfDay(ZoneOffset.UTC).toInstant();
         Instant end = date.atTime(23, 59, 59).toInstant(ZoneOffset.UTC);
+        System.out.println("start = " + start);
+        System.out.println("end = " + end);
 
         return dataRepository.findByTimestampBetween(start, end);
     }

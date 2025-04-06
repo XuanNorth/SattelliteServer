@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class SocketRestController {
 
     @Autowired
-    SocketSentService socketSentService;
+    SocketClientService socketClientService;
 
     String IpGroundStation = "192.168.0.100";
 
     @PostMapping("/{command}")
     public ResponseEntity<Void> sendCommand(@PathVariable String command) {
-        return SocketSentService.sendDataTCP(IpGroundStation,8080,command)
+        return SocketClientService.sendDataTCP(IpGroundStation,8080,command)
                 ?
                 ResponseEntity.ok().build()
                 :

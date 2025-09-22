@@ -12,7 +12,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Builder
 
-@Table(name = "data_entity")
+@Table(name = "data")
 public class DataEntity {
 
     @Id
@@ -34,6 +34,15 @@ public class DataEntity {
 
     @Column
     private Double pressure;
+
+    @Column
+    private Double roll;
+
+    @Column
+    private Double pitch;
+
+    @Column
+    private Double yaw;
 
     @Column(columnDefinition = "TIMESTAMP")
     private Instant timestamp;

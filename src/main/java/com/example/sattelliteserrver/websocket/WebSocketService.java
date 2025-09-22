@@ -15,9 +15,4 @@ public class WebSocketService {
         messagingTemplate.convertAndSend("/topic/data", data);
     }
 
-    public void updatePosture(Double roll , Double pit, Double yaw){
-        messagingTemplate.convertAndSend("/topic/posture", roll + "-" + pit + "-" + yaw);
-
-    }
-
 }
